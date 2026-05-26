@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+.cache/
+.web-ext-artifacts/
+npm-debug.log*
+

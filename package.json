@@ -1,0 +1,24 @@
+{
+  "name": "locus",
+  "version": "0.1.0",
+  "description": "MV3 cross-browser element locator extension for Chrome and Firefox.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:chrome": "node scripts/build.mjs --target=chrome",
+    "build:firefox": "node scripts/build.mjs --target=firefox",
+    "lint:extension": "npm run build:firefox && web-ext lint -s dist/firefox",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.305",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4",
+    "web-ext": "^8.8.0"
+  }
+}
+
